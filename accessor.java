@@ -34,6 +34,7 @@ public class accessor{
         String url = "";
         String userName = "";
         String passWord = "";
+        
     }
 
 }
