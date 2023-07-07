@@ -1,5 +1,4 @@
 import java.sql.*; 
-import java.util.Scanner;
 
 //we will assume the following table structure consisting of Students for this demo:
 
