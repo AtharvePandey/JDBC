@@ -42,7 +42,8 @@ public class queryGenerator {
                 default:
                     System.out.println("invalid option, try again");
                     break;
-            }        
+            }   
+        scnr.close();     
         return query; 
     }
 

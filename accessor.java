@@ -72,7 +72,9 @@ public class accessor{
         //in which con is a valid Connection object, illustrates how to make a result set that is scrollable and insensitive to updates by others, and that is updatable. See ResultSet fields for other options.
 
         ResultSet rs = stmt.executeQuery(query);
-
+        rs.next(); 
+        rs.close();
+        conn.close();
     }
 
 }
