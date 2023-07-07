@@ -52,6 +52,7 @@ public class accessor{
         // A Connection object's database is able to provide information describing its tables, its supported SQL grammar, its stored procedures, the 
         //capabilities of this connection, and so on. This information is obtained with the getMetaData method.
 
+        try {
         Connection conn = DriverManager.getConnection(url, userName, passWord); //the DriverManager acts as the physical vehicle that goes to the database given url and credentials
 
         //STATEMENT
@@ -72,9 +73,16 @@ public class accessor{
         //in which con is a valid Connection object, illustrates how to make a result set that is scrollable and insensitive to updates by others, and that is updatable. See ResultSet fields for other options.
 
         ResultSet rs = stmt.executeQuery(query);
+
         rs.next(); 
         rs.close();
         conn.close();
+        } catch (Exception e) {
+            System.out.println(e.getStackTrace().toString());
+        }
+
+        
+        
     }
 
 }
